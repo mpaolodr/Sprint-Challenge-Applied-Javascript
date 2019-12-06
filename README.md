@@ -30,13 +30,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+--DOM is the visual representation of HTML Document that we can use to manipulate things using javascript
+
 2. What is an event?
+
+--user interactions with the web page
 
 3. What is an event listener?
 
+--a callback function that takes an event as parameter then fires a function after that event occurs
+
 4. Why would we convert a NodeList into an Array?
 
+--Nodelist are array like objects but array methods except foreach method will not work unleess it's converted into an array
+
 5. What is a component?
+
+--reusable pieces of code that allows us to code DRY
 
 ### Git Set up
 
@@ -49,13 +59,13 @@ Edit this document to include your answers after each question. Make sure to lea
 
 Your finished project must include all of the following requirements:
 
-- [ ] Look through the HTML code and familiarize yourself with the different sections. Some of them already exist, but some need to be filled in. DO NOT add any code to the HTML file itself.
+- [x] Look through the HTML code and familiarize yourself with the different sections. Some of them already exist, but some need to be filled in. DO NOT add any code to the HTML file itself.
 
-- [ ] Following the instructions in the `Header/index.js` file, create the Header component.
+- [x] Following the instructions in the `Header/index.js` file, create the Header component.
 
-- [ ] Following the instructions in the `Tabs/index.js` file, create individual Tabs components.
+- [x] Following the instructions in the `Tabs/index.js` file, create individual Tabs components.
 
-- [ ] Following the instructions in the `Cards/index.js` file, create individual Cards components.
+- [x] Following the instructions in the `Cards/index.js` file, create individual Cards components.
 
 ## Stretch Problems
 

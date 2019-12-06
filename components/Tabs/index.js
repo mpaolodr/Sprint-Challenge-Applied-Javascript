@@ -28,7 +28,6 @@ axios
     response.data.topics.forEach(topic => {
       tabsContainer.appendChild(createTab(topic));
     });
-    console.log(response);
   })
   .catch(err => {
     console.log(err);
