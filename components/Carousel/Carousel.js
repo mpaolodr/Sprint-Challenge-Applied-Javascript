@@ -55,7 +55,9 @@ function createCarousel() {
   carousel.appendChild(rightBtn);
 
   //ADD EVENT LISTENER TO BUTTONS
-  rightBtn.addEventListener("click", function() {
+  //I WILL TRY LATER TO KIND OF JUST LOOP THROUGH AN ARRAY OF IMAGES AND THEN JUST DISPLAY THEM AFTER BTN CLICK
+  //I JUST REALIZED THIS NOW!
+  rightBtn.addEventListener("click", function(e) {
     if (
       imgTwo.className === "hide" &&
       imgThree.className === "hide" &&
@@ -70,19 +72,55 @@ function createCarousel() {
     ) {
       imgTwo.classList.toggle("hide");
       imgThree.classList.toggle("hide");
-    } else {
-      imgThree.classList.toggle("hide");
+    } else if (
+      imgOne.className === "hide" &&
+      imgTwo.className === "hide" &&
+      imgFour.className === "hide"
+    ) {
+      imgThree.classList.add("hide");
+      imgFour.classList.remove("hide");
+    } else if (
+      imgOne.className === "hide" &&
+      imgTwo.className === "hide" &&
+      imgThree.className === "hide"
+    ) {
+      imgOne.classList.toggle("hide");
       imgFour.classList.toggle("hide");
     }
 
-    // else if (
-    //   imgOne.className === "hide" &&
-    //   imgTwo.className === "hide" &&
-    //   imgFour.className === "hide"
-    // ) {
-    //   imgThree.classList.toggle("hide");
-    //   imgFour.classList.toggle("hide");
-    // }
+    e.stopPropagation();
+  });
+
+  leftBtn.addEventListener("click", function(e) {
+    if (
+      imgTwo.className === "hide" &&
+      imgThree.className === "hide" &&
+      imgFour.className === "hide"
+    ) {
+      imgOne.classList.add("hide");
+      imgFour.classList.toggle("hide");
+    } else if (
+      imgOne.className === "hide" &&
+      imgThree.className === "hide" &&
+      imgFour.className === "hide"
+    ) {
+      imgOne.classList.toggle("hide");
+      imgTwo.classList.toggle("hide");
+    } else if (
+      imgOne.className === "hide" &&
+      imgTwo.className === "hide" &&
+      imgFour.className === "hide"
+    ) {
+      imgThree.classList.toggle("hide");
+      imgTwo.classList.toggle("hide");
+    } else if (
+      imgOne.className === "hide" &&
+      imgTwo.className === "hide" &&
+      imgThree.className === "hide"
+    ) {
+      imgFour.classList.toggle("hide");
+      imgThree.classList.toggle("hide");
+    }
   });
 
   return carousel;
