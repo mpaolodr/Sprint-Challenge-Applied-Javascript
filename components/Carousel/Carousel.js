@@ -87,7 +87,6 @@ function createCarousel() {
       imgOne.classList.toggle("hide");
       imgFour.classList.toggle("hide");
     }
-
     e.stopPropagation();
   });
 
@@ -121,7 +120,6 @@ function createCarousel() {
       imgFour.classList.toggle("hide");
       imgThree.classList.toggle("hide");
     }
-
     e.stopPropagation();
   });
 
